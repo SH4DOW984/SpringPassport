@@ -1,1 +1,6 @@
+com.gog.LearnLogFourJTwo
+com.mph.controller
+com.mph.dao
 com.mph.entity
+com.mph.service
+com.mph.test
