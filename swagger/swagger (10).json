@@ -1,0 +1,104 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Passport Booking System Rest Doc"
+  },
+  "host": "localhost:8081",
+  "basePath": "/passport",
+  "tags": [
+    {
+      "name": "USER",
+      "description": "CRUD operations with Role"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/USER/alluser": {
+      "get": {
+        "tags": [
+          "USER"
+        ],
+        "summary": "Finds all User",
+        "operationId": " allIUser",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "204": {
+            "description": "No Content"
+          }
+        }
+      }
+    },
+    "/USER/updateu": {
+      "put": {
+        "tags": [
+          "USER"
+        ],
+        "summary": "Update an existing role",
+        "description": "",
+        "operationId": "updateIUser",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Role object that needs to be updated",
+            "required": true,
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Role not Found"
+          }
+        }
+      }
+    },
+    "/USER/deleteu/{id}": {
+      "delete": {
+        "tags": [
+          "USER"
+        ],
+        "summary": "Deletes a role",
+        "description": "",
+        "operationId": "deleteIUser",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Role id to delete",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Role not found"
+          }
+        }
+      }
+    }
+  }
+}
